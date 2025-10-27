@@ -2,8 +2,7 @@
 
 # 🧮 Calculator Application
 
-### Author: Ulysses Burden III  
-**Course:** Software Control Design  
+### Author: Ulysses Burden III    
 **Date:** October 2025  
 
 ---
@@ -22,7 +21,8 @@ It validates user input, handles runtime errors gracefully, and manages resource
 - Addition  
 - Subtraction  
 - Multiplication  
-- Division  
+- Division
+- Memory function
 
 ✅ Input validation for menu selection and numeric entries  
 ✅ Graceful handling of divide-by-zero exceptions  
@@ -30,20 +30,4 @@ It validates user input, handles runtime errors gracefully, and manages resource
 ✅ Clean separation of logic, control, and interface  
 ✅ Safe resource management using `try-with-resources`  
 
----
 
-## 🧩 Class Architecture
-
-### **1. Calculator.java**
-- Acts as the **entry point** of the program.  
-- Creates the `Scanner` and `CalculatorEngine` objects.  
-- Passes those objects into `MenuControl` for dependency injection.  
-- Uses `try-with-resources` to ensure the `Scanner` closes automatically after program termination.  
-
-**Key responsibilities:**
-```java
-try (Scanner in = new Scanner(System.in)) {
-    CalculatorEngine engine = new CalculatorEngine();
-    MenuControl menu = new MenuControl(in, engine);
-    menu.run();
-}
