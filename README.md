@@ -69,3 +69,6 @@ Development Process Used
 Link to Project
 Calculator Application Repository: 
 https://github.com/UBSDFS/java-calculator.git
+
+Project Video: 
+https://youtu.be/IrRv7TUluE4
